@@ -54,6 +54,7 @@ dependencies {
 	include(implementation("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}"))
 
 	// Recommended Dependencies
+	modImplementation "maven.modrinth:better-combat:${project.better_combat_version}"
 	modImplementation("maven.modrinth:adaptive-tooltips:${project.adaptive_tooltips_version}")
 	modImplementation("dev.isxander:yet-another-config-lib:${project.yet_another_config_lib_version}")
 }
