@@ -11,6 +11,7 @@ base {
 }
 
 repositories {
+	// Required Dependencies
 	maven {
 		name = 'Modrinth'
 		url = 'https://api.modrinth.com/maven'
@@ -25,6 +26,12 @@ repositories {
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
 	maven { url 'https://jitpack.io' }
+
+	// Recommended Dependencies
+	maven {
+		name 'Xander Maven'
+		url 'https://maven.isxander.dev/releases'
+	}
 }
 
 dependencies {
@@ -36,6 +43,7 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+	// Required Dependencies
 	modImplementation("maven.modrinth:spell-engine:${project.spell_engine_version}")
 	modImplementation("maven.modrinth:spell-power:${project.spell_power_version}")
 	include modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_animator_version}")
@@ -44,6 +52,10 @@ dependencies {
 	}
 	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${project.mixin_extras_version}")))
 	include(implementation("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}"))
+
+	// Recommended Dependencies
+	modImplementation("maven.modrinth:adaptive-tooltips:${project.adaptive_tooltips_version}")
+	modImplementation("dev.isxander:yet-another-config-lib:${project.yet_another_config_lib_version}")
 }
 
 processResources {
