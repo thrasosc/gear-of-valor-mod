@@ -3,15 +3,18 @@
 	"id": "gear-of-valor",
 	"version": "${version}",
 	"name": "Gear of Valor",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Armour sets and weapons forged in Valor!",
 	"authors": [
-		"Me!"
+		"kyber-6",
+		"aleganza",
+		"Pixel Dream Studios"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/project/gear-of-valor",
+		"sources": "https://github.com/kyber-6/gear-of-valor-mod",
+		"issues": "https://github.com/kyber-6/gear-of-valor-mod/issues"
 	},
-	"license": "All Rights Reserved",
+	"license": "GPLv3",
 	"icon": "assets/gear-of-valor/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -27,7 +30,8 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*",
-		"spell_engine": ">=0.14.3+1.20.1"
+		"spell_engine": ">=0.14.3+1.20.1",
+		"azurelib": ">=2.0.22"
 	},
 	"suggests": {
 		"bettercombat": ">=1.8.5+1.20.1-fabric",

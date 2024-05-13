@@ -4,6 +4,7 @@ import mod.azure.azurelib.AzureLib;
 import net.fabricmc.api.ModInitializer;
 
 import net.pixeldreamstudios.gearofvalor.registry.ItemRegistry;
+import net.pixeldreamstudios.gearofvalor.registry.TabRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,5 +16,6 @@ public class GearOfValor implements ModInitializer {
 	public void onInitialize() {
 		AzureLib.initialize();
 		ItemRegistry.init();
+		TabRegistry.init();
 	}
 }
