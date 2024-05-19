@@ -15,6 +15,11 @@ public class TabRegistry {
         entries.accept(ItemRegistry.PALADIN_CHESTPLATE);
         entries.accept(ItemRegistry.PALADIN_LEGGINGS);
         entries.accept(ItemRegistry.PALADIN_BOOTS);
+
+        entries.accept(ItemRegistry.WOODLAND_SPIRIT_HELMET);
+        entries.accept(ItemRegistry.WOODLAND_SPIRIT_CHESTPLATE);
+        entries.accept(ItemRegistry.WOODLAND_SPIRIT_LEGGINGS);
+        entries.accept(ItemRegistry.WOODLAND_SPIRIT_BOOTS);
     }).build());
 
     public static void init() {

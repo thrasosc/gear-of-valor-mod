@@ -4,5 +4,10 @@
   "item.gear-of-valor.paladin_leggings": "Paladin Leggings",
   "item.gear-of-valor.paladin_boots": "Paladin Boots",
 
+  "item.gear-of-valor.woodland_spirit_helmet": "Woodland Spirit Helmet",
+  "item.gear-of-valor.woodland_spirit_chestplate": "Woodland Spirit Chestplate",
+  "item.gear-of-valor.woodland_spirit_leggings": "Woodland Spirit Leggings",
+  "item.gear-of-valor.woodland_spirit_boots": "Woodland Spirit Boots",
+
   "creative_tab.gear-of-valor": "Gear of Valor"
 }
