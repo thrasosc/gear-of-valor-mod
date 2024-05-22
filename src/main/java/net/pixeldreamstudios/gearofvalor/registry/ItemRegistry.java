@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
+import net.pixeldreamstudios.gearofvalor.item.armor.sets.ArismasAwakeningArmorItem;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.PaladinArmorItem;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.WoodlandSpiritArmorItem;
 
@@ -21,6 +22,11 @@ public class ItemRegistry {
     public static Item WOODLAND_SPIRIT_CHESTPLATE;
     public static Item WOODLAND_SPIRIT_LEGGINGS;
     public static Item WOODLAND_SPIRIT_BOOTS;
+
+    public static Item ARISMAS_AWAKENING_HELMET;
+    public static Item ARISMAS_AWAKENING_CHESTPLATE;
+    public static Item ARISMAS_AWAKENING_LEGGINGS;
+    public static Item ARISMAS_AWAKENING_BOOTS;
 
     static <T extends Item> T item(String id, T c) {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(GearOfValor.MOD_ID, id), c);
@@ -39,5 +45,10 @@ public class ItemRegistry {
         WOODLAND_SPIRIT_CHESTPLATE = item("woodland_spirit_chestplate", new WoodlandSpiritArmorItem(ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
         WOODLAND_SPIRIT_LEGGINGS = item("woodland_spirit_leggings", new WoodlandSpiritArmorItem(ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
         WOODLAND_SPIRIT_BOOTS = item("woodland_spirit_boots", new WoodlandSpiritArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+        ARISMAS_AWAKENING_HELMET = item("arismas_awakening_helmet", new ArismasAwakeningArmorItem(ArmorItem.Type.HELMET, new FabricItemSettings()));
+        ARISMAS_AWAKENING_CHESTPLATE = item("arismas_awakening_chestplate", new ArismasAwakeningArmorItem(ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+        ARISMAS_AWAKENING_LEGGINGS = item("arismas_awakening_leggings", new ArismasAwakeningArmorItem(ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+        ARISMAS_AWAKENING_BOOTS = item("arismas_awakening_boots", new ArismasAwakeningArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
     }
 }

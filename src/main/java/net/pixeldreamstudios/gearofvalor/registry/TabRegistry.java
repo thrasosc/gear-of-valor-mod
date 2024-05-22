@@ -20,6 +20,11 @@ public class TabRegistry {
         entries.accept(ItemRegistry.WOODLAND_SPIRIT_CHESTPLATE);
         entries.accept(ItemRegistry.WOODLAND_SPIRIT_LEGGINGS);
         entries.accept(ItemRegistry.WOODLAND_SPIRIT_BOOTS);
+
+        entries.accept(ItemRegistry.ARISMAS_AWAKENING_HELMET);
+        entries.accept(ItemRegistry.ARISMAS_AWAKENING_CHESTPLATE);
+        entries.accept(ItemRegistry.ARISMAS_AWAKENING_LEGGINGS);
+        entries.accept(ItemRegistry.ARISMAS_AWAKENING_BOOTS);
     }).build());
 
     public static void init() {
