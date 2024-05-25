@@ -12,6 +12,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.spell_power.api.SpellSchools;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -24,7 +25,8 @@ public enum ValorArmorMaterial implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
     }), 20, SoundEvents.ARMOR_EQUIP_GOLD, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
-            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE)
+            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE),
+            SpellSchools.HEALING.attribute, new AttributeModifier("Healing", 10.0, Operation.ADDITION)
     )),
     WOODLAND_SPIRIT("woodland_spirit", 28, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
@@ -32,7 +34,8 @@ public enum ValorArmorMaterial implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
     }), 20, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
-    Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE)
+            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE),
+            SpellSchools.ARCANE.attribute, new AttributeModifier("Arcane", 10.0, Operation.ADDITION)
     )),
     ARISMAS_AWAKENING("arismas_awakening", 28, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
@@ -40,7 +43,8 @@ public enum ValorArmorMaterial implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
     }), 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
-            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE)
+            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE),
+            SpellSchools.FIRE.attribute, new AttributeModifier("Fire", 10.0, Operation.ADDITION)
     )),
     REAPERS_EMBRACE("reapers_embrace", 28, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
@@ -48,7 +52,8 @@ public enum ValorArmorMaterial implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
     }), 20, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
-            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE)
+            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", 0.05, Operation.MULTIPLY_BASE),
+            SpellSchools.SOUL.attribute, new AttributeModifier("Soul", 10.0, Operation.ADDITION)
     ));
 
     private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (p_266653_) -> {
