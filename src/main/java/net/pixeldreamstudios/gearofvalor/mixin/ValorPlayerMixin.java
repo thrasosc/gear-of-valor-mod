@@ -15,19 +15,35 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ValorPlayerMixin {
 
     @Inject(at = @At("TAIL"), method = "Lnet/minecraft/world/entity/player/Player;tick()V")
-    private void arismasAwakeningTick(CallbackInfo info) {
+    private void valorArmorSetBonusTick(CallbackInfo info) {
         Player thisPlayer = (Player)(Object)this;
         ItemStack helmet = thisPlayer.getItemBySlot(EquipmentSlot.HEAD);
-        ItemStack chesplate = thisPlayer.getItemBySlot(EquipmentSlot.CHEST);
+        ItemStack chestplate = thisPlayer.getItemBySlot(EquipmentSlot.CHEST);
         ItemStack leggings = thisPlayer.getItemBySlot(EquipmentSlot.LEGS);
         ItemStack boots = thisPlayer.getItemBySlot(EquipmentSlot.FEET);
+
+        // ARISMA'S AWAKENING
         if (!thisPlayer.isInLava()
                 && helmet.is(ItemRegistry.ARISMAS_AWAKENING_HELMET)
-                && chesplate.is(ItemRegistry.ARISMAS_AWAKENING_CHESTPLATE)
+                && chestplate.is(ItemRegistry.ARISMAS_AWAKENING_CHESTPLATE)
                 && leggings.is(ItemRegistry.ARISMAS_AWAKENING_LEGGINGS)
                 && boots.is(ItemRegistry.ARISMAS_AWAKENING_BOOTS))
         {
             thisPlayer.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false, false));
+        }
+        // REAPER'S EMBRACE
+        if (
+                helmet.is(ItemRegistry.REAPERS_EMBRACE_HELMET)
+                && chestplate.is(ItemRegistry.REAPERS_EMBRACE_CHESTPLATE)
+                && leggings.is(ItemRegistry.REAPERS_EMBRACE_LEGGINGS)
+                && boots.is(ItemRegistry.REAPERS_EMBRACE_BOOTS))
+        {
+            if (thisPlayer.isShiftKeyDown()) {
+                thisPlayer.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, MobEffectInstance.INFINITE_DURATION, 0, false, true, true));
+            }
+            else {
+                thisPlayer.removeEffect(MobEffects.INVISIBILITY);
+            }
         }
     }
 }
