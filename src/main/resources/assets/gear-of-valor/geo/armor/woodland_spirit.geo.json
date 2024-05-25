@@ -41,7 +41,7 @@
 				{
 					"name": "cape",
 					"parent": "armorBody",
-					"pivot": [0, 20, 0],
+					"pivot": [0, 24, 3],
 					"cubes": [
 						{"origin": [-5, 2, 2], "size": [10, 22, 2], "inflate": 0.3, "pivot": [0, 20, 3], "rotation": [10, 0, 0], "uv": [0, 0]},
 						{"origin": [-3, 21, 2.7], "size": [2, 5, 2], "inflate": 0.3, "pivot": [-1, 21, 3], "rotation": [8.21888, 5.71617, -34.58897], "uv": [40, 16], "mirror": true},

@@ -36,8 +36,15 @@
 					"parent": "bipedBody",
 					"pivot": [0, 24, 0],
 					"cubes": [
-						{"origin": [-4, 12, -2], "size": [8, 12, 4], "inflate": 0.3, "uv": [32, 32]},
-						{"origin": [-5.5, 3, 2], "size": [11, 21, 2], "inflate": 0.3, "pivot": [0, 20, 4], "rotation": [7.5, 0, 0], "uv": [0, 0]}
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "inflate": 0.3, "uv": [32, 32]}
+					]
+				},
+				{
+					"name": "cape",
+					"parent": "armorBody",
+					"pivot": [0, 24, 2],
+					"cubes": [
+						{"origin": [-5.5, 2.77317, 1.46078], "size": [11, 21, 2], "inflate": 0.3, "pivot": [0, 24, 2], "rotation": [7.5, 0, 0], "uv": [0, 0]}
 					]
 				},
 				{
