@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public enum ValorArmorMaterial implements ArmorMaterial {
-    PALADIN("paladin", 28, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    PALADIN("paladin", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
@@ -28,7 +28,7 @@ public enum ValorArmorMaterial implements ArmorMaterial {
             Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE),
             SpellSchools.HEALING.attribute, new AttributeModifier("Healing", 10.0, Operation.ADDITION)
     )),
-    WOODLAND_SPIRIT("woodland_spirit", 28, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    WOODLAND_SPIRIT("woodland_spirit", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
@@ -37,7 +37,7 @@ public enum ValorArmorMaterial implements ArmorMaterial {
             Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE),
             SpellSchools.ARCANE.attribute, new AttributeModifier("Arcane", 10.0, Operation.ADDITION)
     )),
-    ARISMAS_AWAKENING("arismas_awakening", 28, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    ARISMAS_AWAKENING("arismas_awakening", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
@@ -46,7 +46,7 @@ public enum ValorArmorMaterial implements ArmorMaterial {
             Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE),
             SpellSchools.FIRE.attribute, new AttributeModifier("Fire", 10.0, Operation.ADDITION)
     )),
-    REAPERS_EMBRACE("reapers_embrace", 28, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    REAPERS_EMBRACE("reapers_embrace", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
@@ -73,7 +73,7 @@ public enum ValorArmorMaterial implements ArmorMaterial {
     private final LazyLoadedValue<Ingredient> repairIngredient;
     private final Map<Attribute, AttributeModifier> additionalAttributes;
 
-    private ValorArmorMaterial(String pName, int pDurabilityMultiplier, EnumMap pProtectionFunctionForType, int pEnchantmentValue, SoundEvent pSound, float pToughness, float pKnockbackResistance, Supplier pRepairIngredient, Map additionalAttributes) {
+    ValorArmorMaterial(String pName, int pDurabilityMultiplier, EnumMap pProtectionFunctionForType, int pEnchantmentValue, SoundEvent pSound, float pToughness, float pKnockbackResistance, Supplier pRepairIngredient, Map additionalAttributes) {
         this.name = "diamond";
         this.durabilityMultiplier = pDurabilityMultiplier;
         this.protectionFunctionForType = pProtectionFunctionForType;
@@ -88,12 +88,12 @@ public enum ValorArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getDurabilityForType(ArmorItem.Type type) {
-        return (Integer)HEALTH_FUNCTION_FOR_TYPE.get(type) * this.durabilityMultiplier;
+        return HEALTH_FUNCTION_FOR_TYPE.get(type) * this.durabilityMultiplier;
     }
 
     @Override
     public int getDefenseForType(ArmorItem.Type type) {
-        return (Integer)this.protectionFunctionForType.get(type);
+        return this.protectionFunctionForType.get(type);
 
     }
 
@@ -109,7 +109,7 @@ public enum ValorArmorMaterial implements ArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredient.get();
+        return this.repairIngredient.get();
     }
 
     @Override

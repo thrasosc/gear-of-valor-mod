@@ -19,9 +19,9 @@ public abstract class CapeArmorModel<T extends ValorArmorItem & GeoAnimatable> e
         cape.updateRotation(-0.013f, 0.0f, 0.125f);
 
         float h = 0.5f;
-        double d = Mth.lerp((double)h, abstractClientPlayer.xCloakO, abstractClientPlayer.xCloak) - Mth.lerp((double)h, abstractClientPlayer.xo, abstractClientPlayer.getX());
-        double e = Mth.lerp((double)h, abstractClientPlayer.yCloakO, abstractClientPlayer.yCloak) - Mth.lerp((double)h, abstractClientPlayer.yo, abstractClientPlayer.getY());
-        double m = Mth.lerp((double)h, abstractClientPlayer.zCloakO, abstractClientPlayer.zCloak) - Mth.lerp((double)h, abstractClientPlayer.zo, abstractClientPlayer.getZ());
+        double d = Mth.lerp(h, abstractClientPlayer.xCloakO, abstractClientPlayer.xCloak) - Mth.lerp(h, abstractClientPlayer.xo, abstractClientPlayer.getX());
+        double e = Mth.lerp(h, abstractClientPlayer.yCloakO, abstractClientPlayer.yCloak) - Mth.lerp(h, abstractClientPlayer.yo, abstractClientPlayer.getY());
+        double m = Mth.lerp(h, abstractClientPlayer.zCloakO, abstractClientPlayer.zCloak) - Mth.lerp(h, abstractClientPlayer.zo, abstractClientPlayer.getZ());
         float n = Mth.rotLerp(h, abstractClientPlayer.yBodyRotO, abstractClientPlayer.yBodyRot);
         double o = Mth.sin(n * ((float)Math.PI / 180));
         double p = -Mth.cos(n * ((float)Math.PI / 180));
