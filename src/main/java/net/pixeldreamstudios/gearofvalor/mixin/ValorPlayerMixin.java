@@ -27,7 +27,7 @@ public class ValorPlayerMixin {
                 && leggings.is(ItemRegistry.ARISMAS_AWAKENING_LEGGINGS)
                 && boots.is(ItemRegistry.ARISMAS_AWAKENING_BOOTS))
         {
-            thisPlayer.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false, true));
+            thisPlayer.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false, false));
         }
     }
 }
