@@ -27,8 +27,7 @@ public class ValorPlayerMixin {
                 && helmet.is(ItemRegistry.ARISMAS_AWAKENING_HELMET)
                 && chestplate.is(ItemRegistry.ARISMAS_AWAKENING_CHESTPLATE)
                 && leggings.is(ItemRegistry.ARISMAS_AWAKENING_LEGGINGS)
-                && boots.is(ItemRegistry.ARISMAS_AWAKENING_BOOTS))
-        {
+                && boots.is(ItemRegistry.ARISMAS_AWAKENING_BOOTS)) {
             thisPlayer.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false, false));
         }
         // REAPER'S EMBRACE
@@ -36,8 +35,7 @@ public class ValorPlayerMixin {
                 helmet.is(ItemRegistry.REAPERS_EMBRACE_HELMET)
                 && chestplate.is(ItemRegistry.REAPERS_EMBRACE_CHESTPLATE)
                 && leggings.is(ItemRegistry.REAPERS_EMBRACE_LEGGINGS)
-                && boots.is(ItemRegistry.REAPERS_EMBRACE_BOOTS))
-        {
+                && boots.is(ItemRegistry.REAPERS_EMBRACE_BOOTS)) {
             if (thisPlayer.isShiftKeyDown()) {
                 thisPlayer.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, MobEffectInstance.INFINITE_DURATION, 0, false, true, true));
             }
