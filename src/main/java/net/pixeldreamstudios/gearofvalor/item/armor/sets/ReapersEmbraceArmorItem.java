@@ -16,7 +16,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.pixeldreamstudios.gearofvalor.item.armor.ValorArmorItem;
-import net.pixeldreamstudios.gearofvalor.item.armor.ValorArmorMaterial;
+import net.pixeldreamstudios.gearofvalor.item.armor.ValorArmorMaterials;
 import net.pixeldreamstudios.gearofvalor.item.armor.client.renderer.ReapersEmbraceArmorRenderer;
 import org.jetbrains.annotations.Nullable;
 
@@ -29,7 +29,7 @@ public class ReapersEmbraceArmorItem extends ValorArmorItem implements GeoItem {
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
     public ReapersEmbraceArmorItem(Type type, Properties properties) {
-        super(ValorArmorMaterial.REAPERS_EMBRACE, type, properties);
+        super(ValorArmorMaterials.REAPERS_EMBRACE, type, properties);
     }
 
     @Override

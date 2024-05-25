@@ -16,7 +16,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.pixeldreamstudios.gearofvalor.item.armor.ValorArmorItem;
-import net.pixeldreamstudios.gearofvalor.item.armor.ValorArmorMaterial;
+import net.pixeldreamstudios.gearofvalor.item.armor.ValorArmorMaterials;
 import net.pixeldreamstudios.gearofvalor.item.armor.client.renderer.ArismasAwakeningArmorRenderer;
 import org.jetbrains.annotations.Nullable;
 
@@ -29,7 +29,7 @@ public class ArismasAwakeningArmorItem extends ValorArmorItem implements GeoItem
     private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
     public ArismasAwakeningArmorItem(Type type, Properties properties) {
-        super(ValorArmorMaterial.ARISMAS_AWAKENING, type, properties);
+        super(ValorArmorMaterials.ARISMAS_AWAKENING, type, properties);
     }
 
     @Override

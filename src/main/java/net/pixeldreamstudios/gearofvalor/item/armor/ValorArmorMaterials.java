@@ -18,7 +18,7 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public enum ValorArmorMaterial implements ArmorMaterial {
+public enum ValorArmorMaterials implements ArmorMaterial {
     PALADIN("paladin", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
@@ -73,7 +73,7 @@ public enum ValorArmorMaterial implements ArmorMaterial {
     private final LazyLoadedValue<Ingredient> repairIngredient;
     private final Map<Attribute, AttributeModifier> additionalAttributes;
 
-    ValorArmorMaterial(String pName, int pDurabilityMultiplier, EnumMap pProtectionFunctionForType, int pEnchantmentValue, SoundEvent pSound, float pToughness, float pKnockbackResistance, Supplier pRepairIngredient, Map additionalAttributes) {
+    ValorArmorMaterials(String pName, int pDurabilityMultiplier, EnumMap pProtectionFunctionForType, int pEnchantmentValue, SoundEvent pSound, float pToughness, float pKnockbackResistance, Supplier pRepairIngredient, Map additionalAttributes) {
         this.name = "diamond";
         this.durabilityMultiplier = pDurabilityMultiplier;
         this.protectionFunctionForType = pProtectionFunctionForType;
