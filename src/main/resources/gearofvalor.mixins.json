@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.pixeldreamstudios.gearofvalor.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ValorPlayerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

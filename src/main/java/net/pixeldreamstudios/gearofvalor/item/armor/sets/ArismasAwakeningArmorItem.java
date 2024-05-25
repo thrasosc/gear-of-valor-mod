@@ -39,6 +39,11 @@ public class ArismasAwakeningArmorItem extends ValorArmorItem implements GeoItem
     }
 
     @Override
+    public boolean isFireResistant() {
+        return true;
+    }
+
+    @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
             private ArismasAwakeningArmorRenderer renderer;
