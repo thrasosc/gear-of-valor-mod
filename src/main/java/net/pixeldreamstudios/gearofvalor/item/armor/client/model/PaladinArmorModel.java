@@ -1,5 +1,6 @@
 package net.pixeldreamstudios.gearofvalor.item.armor.client.model;
 
+import mod.azure.azurelib.core.animation.AnimationState;
 import mod.azure.azurelib.model.GeoModel;
 import net.minecraft.resources.ResourceLocation;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
@@ -23,5 +24,11 @@ public class PaladinArmorModel extends GeoModel<PaladinArmorItem> {
     @Override
     public ResourceLocation getAnimationResource(PaladinArmorItem paladinArmorItem) {
         return animation;
+    }
+
+    @Override
+    public void setCustomAnimations(PaladinArmorItem animatable, long instanceId, AnimationState<PaladinArmorItem> animationState) {
+        super.setCustomAnimations(animatable, instanceId, animationState);
+        var cape = getAnimationProcessor().getBone("cape");
     }
 }
