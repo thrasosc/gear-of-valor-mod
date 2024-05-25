@@ -31,7 +31,7 @@ public enum ValorArmorMaterial implements ArmorMaterial {
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
-    }), 20, SoundEvents.ARMOR_EQUIP_GOLD, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
+    }), 20, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
     Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE)
     )),
     ARISMAS_AWAKENING("arismas_awakening", 28, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
@@ -39,7 +39,15 @@ public enum ValorArmorMaterial implements ArmorMaterial {
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
-    }), 20, SoundEvents.ARMOR_EQUIP_GOLD, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
+    }), 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
+            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE)
+    )),
+    REAPERS_EMBRACE("reapers_embrace", 28, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 6);
+        map.put(ArmorItem.Type.CHESTPLATE, 8);
+        map.put(ArmorItem.Type.HELMET, 3);
+    }), 20, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
             Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE)
     ));
 

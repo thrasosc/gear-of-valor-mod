@@ -25,6 +25,11 @@ public class TabRegistry {
         entries.accept(ItemRegistry.ARISMAS_AWAKENING_CHESTPLATE);
         entries.accept(ItemRegistry.ARISMAS_AWAKENING_LEGGINGS);
         entries.accept(ItemRegistry.ARISMAS_AWAKENING_BOOTS);
+
+        entries.accept(ItemRegistry.REAPERS_EMBRACE_HELMET);
+        entries.accept(ItemRegistry.REAPERS_EMBRACE_CHESTPLATE);
+        entries.accept(ItemRegistry.REAPERS_EMBRACE_LEGGINGS);
+        entries.accept(ItemRegistry.REAPERS_EMBRACE_BOOTS);
     }).build());
 
     public static void init() {

@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.ArismasAwakeningArmorItem;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.PaladinArmorItem;
+import net.pixeldreamstudios.gearofvalor.item.armor.sets.ReapersEmbraceArmorItem;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.WoodlandSpiritArmorItem;
 
 public class ItemRegistry {
@@ -27,6 +28,11 @@ public class ItemRegistry {
     public static Item ARISMAS_AWAKENING_CHESTPLATE;
     public static Item ARISMAS_AWAKENING_LEGGINGS;
     public static Item ARISMAS_AWAKENING_BOOTS;
+
+    public static Item REAPERS_EMBRACE_HELMET;
+    public static Item REAPERS_EMBRACE_CHESTPLATE;
+    public static Item REAPERS_EMBRACE_LEGGINGS;
+    public static Item REAPERS_EMBRACE_BOOTS;
 
     static <T extends Item> T item(String id, T c) {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(GearOfValor.MOD_ID, id), c);
@@ -50,5 +56,10 @@ public class ItemRegistry {
         ARISMAS_AWAKENING_CHESTPLATE = item("arismas_awakening_chestplate", new ArismasAwakeningArmorItem(ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
         ARISMAS_AWAKENING_LEGGINGS = item("arismas_awakening_leggings", new ArismasAwakeningArmorItem(ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
         ARISMAS_AWAKENING_BOOTS = item("arismas_awakening_boots", new ArismasAwakeningArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+        REAPERS_EMBRACE_HELMET = item("reapers_embrace_helmet", new ReapersEmbraceArmorItem(ArmorItem.Type.HELMET, new FabricItemSettings()));
+        REAPERS_EMBRACE_CHESTPLATE = item("reapers_embrace_chestplate", new ReapersEmbraceArmorItem(ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+        REAPERS_EMBRACE_LEGGINGS = item("reapers_embrace_leggings", new ReapersEmbraceArmorItem(ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+        REAPERS_EMBRACE_BOOTS = item("reapers_embrace_boots", new ReapersEmbraceArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
     }
 }
