@@ -25,7 +25,7 @@ public enum ValorArmorMaterial implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
     }), 20, SoundEvents.ARMOR_EQUIP_GOLD, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
-            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE),
+            Attributes.ARMOR_TOUGHNESS, new AttributeModifier("Armor Toughness", 0.05, Operation.MULTIPLY_BASE),
             SpellSchools.HEALING.attribute, new AttributeModifier("Healing", 10.0, Operation.ADDITION)
     )),
     WOODLAND_SPIRIT("woodland_spirit", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
@@ -34,7 +34,7 @@ public enum ValorArmorMaterial implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
     }), 20, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
-            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE),
+            Attributes.ATTACK_SPEED, new AttributeModifier("Attack Speed", 0.05, Operation.MULTIPLY_BASE),
             SpellSchools.ARCANE.attribute, new AttributeModifier("Arcane", 10.0, Operation.ADDITION)
     )),
     ARISMAS_AWAKENING("arismas_awakening", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
@@ -43,7 +43,7 @@ public enum ValorArmorMaterial implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
     }), 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
-            Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", -0.05, Operation.MULTIPLY_BASE),
+            Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier("Knockback Resistance", 0.05, Operation.MULTIPLY_BASE),
             SpellSchools.FIRE.attribute, new AttributeModifier("Fire", 10.0, Operation.ADDITION)
     )),
     REAPERS_EMBRACE("reapers_embrace", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
