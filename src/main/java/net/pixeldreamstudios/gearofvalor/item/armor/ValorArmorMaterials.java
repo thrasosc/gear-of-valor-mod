@@ -19,39 +19,38 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public enum ValorArmorMaterials implements ArmorMaterial {
-    PALADIN("paladin", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    PALADIN("paladin", 33, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
-    }), 20, SoundEvents.ARMOR_EQUIP_GOLD, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
-            Attributes.ARMOR_TOUGHNESS, new AttributeModifier("Armor Toughness", 0.05, Operation.MULTIPLY_BASE),
+    }), 10, SoundEvents.ARMOR_EQUIP_GOLD, 2.0f, 0.3f, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
             SpellSchools.HEALING.attribute, new AttributeModifier("Healing", 10.0, Operation.ADDITION)
     )),
-    WOODLAND_SPIRIT("woodland_spirit", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    WOODLAND_SPIRIT("woodland_spirit", 33, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
-    }), 20, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
+    }), 10, SoundEvents.ARMOR_EQUIP_IRON, 2.0f, 0.1f, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
             Attributes.ATTACK_SPEED, new AttributeModifier("Attack Speed", 0.05, Operation.MULTIPLY_BASE),
             SpellSchools.ARCANE.attribute, new AttributeModifier("Arcane", 10.0, Operation.ADDITION)
     )),
-    ARISMAS_AWAKENING("arismas_awakening", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    ARISMAS_AWAKENING("arismas_awakening", 33, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 3);
         map.put(ArmorItem.Type.LEGGINGS, 6);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
-    }), 20, SoundEvents.ARMOR_EQUIP_NETHERITE, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
+    }), 10, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.2f, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
             Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier("Knockback Resistance", 0.05, Operation.MULTIPLY_BASE),
             SpellSchools.FIRE.attribute, new AttributeModifier("Fire", 10.0, Operation.ADDITION)
     )),
-    REAPERS_EMBRACE("reapers_embrace", 28, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
-        map.put(ArmorItem.Type.BOOTS, 3);
-        map.put(ArmorItem.Type.LEGGINGS, 6);
-        map.put(ArmorItem.Type.CHESTPLATE, 8);
-        map.put(ArmorItem.Type.HELMET, 3);
-    }), 20, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
+    REAPERS_EMBRACE("reapers_embrace", 5, Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 1);
+        map.put(ArmorItem.Type.LEGGINGS, 2);
+        map.put(ArmorItem.Type.CHESTPLATE, 3);
+        map.put(ArmorItem.Type.HELMET, 1);
+    }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.1F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
             Attributes.MOVEMENT_SPEED, new AttributeModifier("Movement Speed", 0.05, Operation.MULTIPLY_BASE),
             SpellSchools.SOUL.attribute, new AttributeModifier("Soul", 10.0, Operation.ADDITION)
     ));
