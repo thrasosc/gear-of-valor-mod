@@ -34,7 +34,7 @@ public class ArismasAwakeningArmorItem extends ValorArmorItem implements GeoItem
 
     @Override
     public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> list, TooltipFlag tooltipFlag) {
-        list.add(Component.translatable("Harness the might of ancient dragons").withStyle(ChatFormatting.DARK_BLUE));
+        list.add(Component.translatable("Harness the might of ancient dragons").withStyle(ChatFormatting.GOLD));
         super.appendHoverText(itemStack, level, list, tooltipFlag);
     }
 
