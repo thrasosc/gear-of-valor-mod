@@ -2,7 +2,8 @@ package net.pixeldreamstudios.gearofvalor.item.armor.client.model;
 
 import mod.azure.azurelib.core.animation.AnimationState;
 import mod.azure.azurelib.util.ClientUtils;
-import net.minecraft.core.particles.ParticleOptions;
+import mod.chloeprime.aaaparticles.api.common.AAALevel;
+import mod.chloeprime.aaaparticles.api.common.ParticleEmitterInfo;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
@@ -12,12 +13,13 @@ import net.pixeldreamstudios.gearofvalor.GearOfValor;
 import net.pixeldreamstudios.gearofvalor.item.armor.client.model.abstraction.CapeArmorModel;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.ReapersEmbraceArmorItem;
 import net.pixeldreamstudios.gearofvalor.registry.ItemRegistry;
-import net.spell_engine.particle.Particles;
 
 public class ReapersEmbraceArmorModel extends CapeArmorModel<ReapersEmbraceArmorItem> {
     private static final ResourceLocation model = new ResourceLocation(GearOfValor.MOD_ID, "geo/armor/reapers_embrace.geo.json");
     private static final ResourceLocation texture = new ResourceLocation(GearOfValor.MOD_ID, "textures/armor/reapers_embrace.png");
     private static final ResourceLocation animation = new ResourceLocation(GearOfValor.MOD_ID, "animations/armor/reapers_embrace.animation.json");
+
+    private static final ParticleEmitterInfo BREAKDOWN = new ParticleEmitterInfo(new ResourceLocation(GearOfValor.MOD_ID, "breakdown"));
 
     @Override
     public ResourceLocation getModelResource(ReapersEmbraceArmorItem reapersEmbraceArmorItem) {
@@ -82,11 +84,14 @@ public class ReapersEmbraceArmorModel extends CapeArmorModel<ReapersEmbraceArmor
     }
 
     private void renderParticles(Player player, Level level) {
-        for (int i = 0; i < 5; ++i) {
-            double d = level.random.nextGaussian() * 0.02;
-            double e = level.random.nextGaussian() * 0.02;
-            double f = level.random.nextGaussian() * 0.02;
-            level.addParticle(Particles.arcane_spell.particleType, player.getRandomX(1.0), player.getRandomY(), player.getRandomZ(1.0), d, e, f);
+        if (level.isClientSide()) {
+            AAALevel.addParticle(level, false, BREAKDOWN.clone().position(player.getBlockX() + 0.5d, player.getBlockY() + 1.0d, player.getBlockZ() + 0.5d));
+//            for (int i = 0; i < 5; ++i) {
+//                double d = level.random.nextGaussian() * 0.02;
+//                double e = level.random.nextGaussian() * 0.02;
+//                double f = level.random.nextGaussian() * 0.02;
+//                level.addParticle(Particles.arcane_spell.particleType, player.getRandomX(1.0), player.getRandomY(), player.getRandomZ(1.0), d, e, f);
+//            }
         }
     }
 }
