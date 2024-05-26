@@ -49,7 +49,7 @@ public class ValorPlayerMixin {
                 timer++;
                 if (level.isClientSide()) {
                     if (timer >= FOOT_PARTICLE_DELAY) {
-                        AAALevel.addParticle(level, false, FOOT_SMOKE.clone().scale(0.75f).position(thisPlayer.getBlockX() + 0.5d, thisPlayer.getBlockY(), thisPlayer.getBlockZ() + 0.5d));
+                        AAALevel.addParticle(level, false, FOOT_SMOKE.clone().scale(0.9f).position(thisPlayer.getX(), thisPlayer.getBlockY(), thisPlayer.getZ()));
                         timer = 0;
                     }
                 }
