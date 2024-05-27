@@ -84,14 +84,14 @@ public class ReapersEmbraceArmorModel extends CapeArmorModel<ReapersEmbraceArmor
     }
 
     private void renderParticles(Player player, Level level) {
-        if (level.isClientSide()) {
-            AAALevel.addParticle(level, false, BREAKDOWN.clone().position(player.getBlockX() + 0.5d, player.getBlockY() + 1.0d, player.getBlockZ() + 0.5d));
+        AAALevel.addParticle(level, false, BREAKDOWN.clone().bindOnEntity(player));
+//        if (level.isClientSide()) {
 //            for (int i = 0; i < 5; ++i) {
 //                double d = level.random.nextGaussian() * 0.02;
 //                double e = level.random.nextGaussian() * 0.02;
 //                double f = level.random.nextGaussian() * 0.02;
 //                level.addParticle(Particles.arcane_spell.particleType, player.getRandomX(1.0), player.getRandomY(), player.getRandomZ(1.0), d, e, f);
 //            }
-        }
+//        }
     }
 }
