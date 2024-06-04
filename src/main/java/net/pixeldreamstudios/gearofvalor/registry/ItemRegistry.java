@@ -6,8 +6,10 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tiers;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.*;
+import net.pixeldreamstudios.gearofvalor.item.weapon.AncientVanguardSwordItem;
 
 public class ItemRegistry {
     // ARMOR SETS
@@ -35,6 +37,9 @@ public class ItemRegistry {
     public static Item ANCIENT_VANGUARD_CHESTPLATE;
     public static Item ANCIENT_VANGUARD_LEGGINGS;
     public static Item ANCIENT_VANGUARD_BOOTS;
+
+    // WEAPONS
+    public static Item ANCIENT_VANGUARD_SWORD;
 
     static <T extends Item> T item(String id, T c) {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(GearOfValor.MOD_ID, id), c);
@@ -68,5 +73,7 @@ public class ItemRegistry {
         ANCIENT_VANGUARD_CHESTPLATE = item("ancient_vanguard_chestplate", new AncientVanguardArmorItem(ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
         ANCIENT_VANGUARD_LEGGINGS = item("ancient_vanguard_leggings", new AncientVanguardArmorItem(ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
         ANCIENT_VANGUARD_BOOTS = item("ancient_vanguard_boots", new AncientVanguardArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+        ANCIENT_VANGUARD_SWORD = item("ancient_vanguard_sword", new AncientVanguardSwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     }
 }
