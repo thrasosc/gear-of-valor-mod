@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.*;
+import net.pixeldreamstudios.gearofvalor.item.weapon.AncientVanguardShieldItem;
 import net.pixeldreamstudios.gearofvalor.item.weapon.AncientVanguardSwordItem;
 
 public class ItemRegistry {
@@ -40,6 +41,7 @@ public class ItemRegistry {
 
     // WEAPONS
     public static Item ANCIENT_VANGUARD_SWORD;
+    public static Item ANCIENT_VANGUARD_SHIELD;
 
     static <T extends Item> T item(String id, T c) {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(GearOfValor.MOD_ID, id), c);
@@ -75,5 +77,6 @@ public class ItemRegistry {
         ANCIENT_VANGUARD_BOOTS = item("ancient_vanguard_boots", new AncientVanguardArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
         ANCIENT_VANGUARD_SWORD = item("ancient_vanguard_sword", new AncientVanguardSwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
+        ANCIENT_VANGUARD_SHIELD = item("ancient_vanguard_shield", new AncientVanguardShieldItem((new Item.Properties()).durability(672)));
     }
 }
