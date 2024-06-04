@@ -35,6 +35,9 @@ public class TabRegistry {
         entries.accept(ItemRegistry.ANCIENT_VANGUARD_CHESTPLATE);
         entries.accept(ItemRegistry.ANCIENT_VANGUARD_LEGGINGS);
         entries.accept(ItemRegistry.ANCIENT_VANGUARD_BOOTS);
+
+        entries.accept(ItemRegistry.ANCIENT_VANGUARD_SWORD);
+        entries.accept(ItemRegistry.ANCIENT_VANGUARD_SHIELD);
     }).build());
 
     public static void init() {
