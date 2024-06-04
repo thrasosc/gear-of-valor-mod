@@ -7,10 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
-import net.pixeldreamstudios.gearofvalor.item.armor.sets.ArismasAwakeningArmorItem;
-import net.pixeldreamstudios.gearofvalor.item.armor.sets.PaladinArmorItem;
-import net.pixeldreamstudios.gearofvalor.item.armor.sets.ReapersEmbraceArmorItem;
-import net.pixeldreamstudios.gearofvalor.item.armor.sets.WoodlandSpiritArmorItem;
+import net.pixeldreamstudios.gearofvalor.item.armor.sets.*;
 
 public class ItemRegistry {
     // ARMOR SETS
@@ -33,6 +30,11 @@ public class ItemRegistry {
     public static Item REAPERS_EMBRACE_CHESTPLATE;
     public static Item REAPERS_EMBRACE_LEGGINGS;
     public static Item REAPERS_EMBRACE_BOOTS;
+
+    public static Item ANCIENT_VANGUARD_HELMET;
+    public static Item ANCIENT_VANGUARD_CHESTPLATE;
+    public static Item ANCIENT_VANGUARD_LEGGINGS;
+    public static Item ANCIENT_VANGUARD_BOOTS;
 
     static <T extends Item> T item(String id, T c) {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(GearOfValor.MOD_ID, id), c);
@@ -61,5 +63,10 @@ public class ItemRegistry {
         REAPERS_EMBRACE_CHESTPLATE = item("reapers_embrace_chestplate", new ReapersEmbraceArmorItem(ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
         REAPERS_EMBRACE_LEGGINGS = item("reapers_embrace_leggings", new ReapersEmbraceArmorItem(ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
         REAPERS_EMBRACE_BOOTS = item("reapers_embrace_boots", new ReapersEmbraceArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+        ANCIENT_VANGUARD_HELMET = item("ancient_vanguard_helmet", new AncientVanguardArmorItem(ArmorItem.Type.HELMET, new FabricItemSettings()));
+        ANCIENT_VANGUARD_CHESTPLATE = item("ancient_vanguard_chestplate", new AncientVanguardArmorItem(ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+        ANCIENT_VANGUARD_LEGGINGS = item("ancient_vanguard_leggings", new AncientVanguardArmorItem(ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+        ANCIENT_VANGUARD_BOOTS = item("ancient_vanguard_boots", new AncientVanguardArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
     }
 }
