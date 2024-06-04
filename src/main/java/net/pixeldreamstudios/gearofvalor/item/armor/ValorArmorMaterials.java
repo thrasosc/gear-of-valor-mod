@@ -60,7 +60,7 @@ public enum ValorArmorMaterials implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 3);
     }), 10, SoundEvents.ARMOR_EQUIP_IRON, 2.0F, 0.3F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
-            SpellSchools.LIGHTNING.attribute, new AttributeModifier("Lightning", 10.0, Operation.ADDITION),
+            SpellSchools.FIRE.attribute, new AttributeModifier("Fire", 10.0, Operation.ADDITION),
             Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier("Knockback Resistance", 0.05, Operation.MULTIPLY_BASE)
     ));
 
