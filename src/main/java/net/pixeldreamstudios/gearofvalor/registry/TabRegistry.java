@@ -38,6 +38,11 @@ public class TabRegistry {
 
         entries.accept(ItemRegistry.ANCIENT_VANGUARD_SWORD);
         entries.accept(ItemRegistry.ANCIENT_VANGUARD_SHIELD);
+
+        entries.accept(ItemRegistry.NIGHT_RIDER_HELMET);
+        entries.accept(ItemRegistry.NIGHT_RIDER_CHESTPLATE);
+        entries.accept(ItemRegistry.NIGHT_RIDER_LEGGINGS);
+        entries.accept(ItemRegistry.NIGHT_RIDER_BOOTS);
     }).build());
 
     public static void init() {

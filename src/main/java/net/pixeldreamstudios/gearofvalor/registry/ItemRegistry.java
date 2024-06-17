@@ -43,6 +43,11 @@ public class ItemRegistry {
     public static Item ANCIENT_VANGUARD_SWORD;
     public static Item ANCIENT_VANGUARD_SHIELD;
 
+    public static Item NIGHT_RIDER_HELMET;
+    public static Item NIGHT_RIDER_CHESTPLATE;
+    public static Item NIGHT_RIDER_LEGGINGS;
+    public static Item NIGHT_RIDER_BOOTS;
+
     static <T extends Item> T item(String id, T c) {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(GearOfValor.MOD_ID, id), c);
         return c;
@@ -78,5 +83,11 @@ public class ItemRegistry {
 
         ANCIENT_VANGUARD_SWORD = item("ancient_vanguard_sword", new AncientVanguardSwordItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
         ANCIENT_VANGUARD_SHIELD = item("ancient_vanguard_shield", new AncientVanguardShieldItem((new Item.Properties()).durability(672)));
+
+        NIGHT_RIDER_HELMET = item("night_rider_helmet", new NightRiderArmorItem(ArmorItem.Type.HELMET, new FabricItemSettings()));
+        NIGHT_RIDER_CHESTPLATE = item("night_rider_chestplate", new NightRiderArmorItem(ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+        NIGHT_RIDER_LEGGINGS = item("night_rider_leggings", new NightRiderArmorItem(ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+        NIGHT_RIDER_BOOTS = item("night_rider_boots", new NightRiderArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
     }
 }

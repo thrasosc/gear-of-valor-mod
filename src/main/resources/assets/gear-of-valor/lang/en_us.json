@@ -27,5 +27,10 @@
   "item.gear-of-valor.ancient_vanguard_sword": "Ancient Vanguard Sword",
   "item.gear-of-valor.ancient_vanguard_shield": "Ancient Vanguard Shield",
 
+  "item.gear-of-valor.night_rider_helmet": "Night Rider Helmet",
+  "item.gear-of-valor.night_rider_chestplate": "Night Rider Chestplate",
+  "item.gear-of-valor.night_rider_leggings": "Night Rider Leggings",
+  "item.gear-of-valor.night_rider_boots": "Night Rider Boots",
+
   "creative_tab.gear-of-valor": "Gear of Valor"
 }
