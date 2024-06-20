@@ -11,6 +11,7 @@ import net.pixeldreamstudios.gearofvalor.GearOfValor;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.*;
 import net.pixeldreamstudios.gearofvalor.item.weapon.AncientVanguardShieldItem;
 import net.pixeldreamstudios.gearofvalor.item.weapon.AncientVanguardSwordItem;
+import net.pixeldreamstudios.gearofvalor.item.weapon.NightRiderAxeItem;
 
 public class ItemRegistry {
     // ARMOR SETS
@@ -39,14 +40,16 @@ public class ItemRegistry {
     public static Item ANCIENT_VANGUARD_LEGGINGS;
     public static Item ANCIENT_VANGUARD_BOOTS;
 
-    // WEAPONS
-    public static Item ANCIENT_VANGUARD_SWORD;
-    public static Item ANCIENT_VANGUARD_SHIELD;
-
     public static Item NIGHT_RIDER_HELMET;
     public static Item NIGHT_RIDER_CHESTPLATE;
     public static Item NIGHT_RIDER_LEGGINGS;
     public static Item NIGHT_RIDER_BOOTS;
+
+    // WEAPONS
+    public static Item ANCIENT_VANGUARD_SWORD;
+    public static Item ANCIENT_VANGUARD_SHIELD;
+
+    public static Item NIGHT_RIDER_AXE;
 
     static <T extends Item> T item(String id, T c) {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(GearOfValor.MOD_ID, id), c);
@@ -89,5 +92,6 @@ public class ItemRegistry {
         NIGHT_RIDER_LEGGINGS = item("night_rider_leggings", new NightRiderArmorItem(ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
         NIGHT_RIDER_BOOTS = item("night_rider_boots", new NightRiderArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
+        NIGHT_RIDER_AXE = item("night_rider_axe", new NightRiderAxeItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     }
 }

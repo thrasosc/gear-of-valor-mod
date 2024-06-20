@@ -43,6 +43,8 @@ public class TabRegistry {
         entries.accept(ItemRegistry.NIGHT_RIDER_CHESTPLATE);
         entries.accept(ItemRegistry.NIGHT_RIDER_LEGGINGS);
         entries.accept(ItemRegistry.NIGHT_RIDER_BOOTS);
+
+        entries.accept(ItemRegistry.NIGHT_RIDER_AXE);
     }).build());
 
     public static void init() {
