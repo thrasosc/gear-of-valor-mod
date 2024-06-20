@@ -34,7 +34,7 @@ public class NightRiderArmorItem extends ValorArmorItem implements GeoItem {
 
     @Override
     public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> list, TooltipFlag tooltipFlag) {
-        list.add(Component.translatable("Bear the light of righteousness").withStyle(ChatFormatting.YELLOW));
+        list.add(Component.translatable("Cavaliers of The Night").withStyle(ChatFormatting.DARK_AQUA));
         super.appendHoverText(itemStack, level, list, tooltipFlag);
     }
 
