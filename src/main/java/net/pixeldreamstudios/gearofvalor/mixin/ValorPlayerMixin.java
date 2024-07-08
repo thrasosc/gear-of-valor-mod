@@ -1,15 +1,11 @@
 package net.pixeldreamstudios.gearofvalor.mixin;
 
-import mod.chloeprime.aaaparticles.api.common.AAALevel;
-import mod.chloeprime.aaaparticles.api.common.ParticleEmitterInfo;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.pixeldreamstudios.gearofvalor.GearOfValor;
 import net.pixeldreamstudios.gearofvalor.registry.ItemRegistry;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -20,7 +16,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ValorPlayerMixin {
     private final int FOOT_PARTICLE_DELAY = 40;
     private int timer = 0;
-    private static final ParticleEmitterInfo FOOT_SMOKE = new ParticleEmitterInfo(new ResourceLocation(GearOfValor.MOD_ID, "foot_smoke1"));
+    //TODO AAA Particles 2
+//    private static final ParticleEmitterInfo FOOT_SMOKE = new ParticleEmitterInfo(new ResourceLocation(GearOfValor.MOD_ID, "foot_smoke1"));
 
     @Inject(at = @At("TAIL"), method = "Lnet/minecraft/world/entity/player/Player;tick()V")
     private void valorArmorSetBonusTick(CallbackInfo info) {
@@ -49,7 +46,8 @@ public class ValorPlayerMixin {
                 timer++;
                 if (level.isClientSide()) {
                     if (timer >= FOOT_PARTICLE_DELAY) {
-                        AAALevel.addParticle(level, false, FOOT_SMOKE.clone().scale(0.9f).position(thisPlayer.getX(), thisPlayer.getBlockY(), thisPlayer.getZ()));
+                        //TODO AAA Particles 3
+//                        AAALevel.addParticle(level, false, FOOT_SMOKE.clone().scale(0.9f).position(thisPlayer.getX(), thisPlayer.getBlockY(), thisPlayer.getZ()));
                         timer = 0;
                     }
                 }

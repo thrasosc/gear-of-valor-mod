@@ -2,8 +2,6 @@ package net.pixeldreamstudios.gearofvalor.item.armor.client.model;
 
 import mod.azure.azurelib.core.animation.AnimationState;
 import mod.azure.azurelib.util.ClientUtils;
-import mod.chloeprime.aaaparticles.api.common.AAALevel;
-import mod.chloeprime.aaaparticles.api.common.ParticleEmitterInfo;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
@@ -19,7 +17,8 @@ public class ReapersEmbraceArmorModel extends CapeArmorModel<ReapersEmbraceArmor
     private static final ResourceLocation texture = new ResourceLocation(GearOfValor.MOD_ID, "textures/armor/reapers_embrace.png");
     private static final ResourceLocation animation = new ResourceLocation(GearOfValor.MOD_ID, "animations/armor/reapers_embrace.animation.json");
 
-    private static final ParticleEmitterInfo BREAKDOWN = new ParticleEmitterInfo(new ResourceLocation(GearOfValor.MOD_ID, "breakdown"));
+    //TODO AAA Particles 5
+//    private static final ParticleEmitterInfo BREAKDOWN = new ParticleEmitterInfo(new ResourceLocation(GearOfValor.MOD_ID, "breakdown"));
 
     @Override
     public ResourceLocation getModelResource(ReapersEmbraceArmorItem reapersEmbraceArmorItem) {
@@ -84,7 +83,11 @@ public class ReapersEmbraceArmorModel extends CapeArmorModel<ReapersEmbraceArmor
     }
 
     private void renderParticles(Player player, Level level) {
-        AAALevel.addParticle(level, false, BREAKDOWN.clone().bindOnEntity(player));
+        //TODO AAA Particles 6
+//        AAALevel.addParticle(level, false, BREAKDOWN.clone().bindOnEntity(player));
+        //
+
+        // not in the to-do
 //        if (level.isClientSide()) {
 //            for (int i = 0; i < 5; ++i) {
 //                double d = level.random.nextGaussian() * 0.02;
