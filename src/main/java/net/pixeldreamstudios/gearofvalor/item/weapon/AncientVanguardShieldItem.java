@@ -25,11 +25,11 @@ public class AncientVanguardShieldItem extends ShieldItem implements GeoItem {
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
-            private AncientVanguardShieldRenderer renderer;
-
+            private AncientVanguardShieldRenderer renderer = null;
             @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                if (renderer == null) return new AncientVanguardShieldRenderer();
+                if (renderer == null)
+                    return new AncientVanguardShieldRenderer();
                 return this.renderer;
             }
         });
