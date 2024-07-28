@@ -3,6 +3,8 @@ package net.pixeldreamstudios.gearofvalor;
 import mod.azure.azurelib.AzureLib;
 import net.fabricmc.api.ModInitializer;
 
+import net.pixeldreamstudios.gearofvalor.block.ModBlocks;
+import net.pixeldreamstudios.gearofvalor.item.ModItems;
 import net.pixeldreamstudios.gearofvalor.registry.ItemRegistry;
 import net.pixeldreamstudios.gearofvalor.registry.TabRegistry;
 import org.slf4j.Logger;
@@ -17,5 +19,9 @@ public class GearOfValor implements ModInitializer {
 		AzureLib.initialize();
 		ItemRegistry.init();
 		TabRegistry.init();
+		ModBlocks.registerModBlocks();
+		ModItems.registerModItems();
+
+
 	}
 }

@@ -34,5 +34,18 @@
 
   "item.gear-of-valor.night_rider_axe": "Night Rider Axe",
 
-  "creative_tab.gear-of-valor": "Gear of Valor"
+  "creative_tab.gear-of-valor": "Gear of Valor",
+
+  "block.gear-of-valor.soulinite_ore": "Soulinite Ore",
+  "block.gear-of-valor.deepslate_soulinite_ore": "Deepslate Soulinite Ore",
+  "block.gear-of-valor.nether_soulinite_ore": "Nether Soulinite Ore",
+  "block.gear-of-valor.end_stone_soulinite_ore": "End Stone Soulinite Ore",
+  "block.gear-of-valor.fallen_ore": "Fallen Ore",
+  "block.gear-of-valor.deepslate_fallen_ore": "Deepslate Fallen Ore",
+  "block.gear-of-valor.nether_fallen_ore": "Nether Fallen Ore",
+  "block.gear-of-valor.end_stone_fallen_ore": "End Stone Fallen Ore",
+  "item.gear-of-valor.raw_fallen": "Raw Fallen",
+  "item.gear-of-valor.fallen": "Fallen",
+  "item.gear-of-valor.raw_soulinite": "Raw Soulinite",
+  "item.gear-of-valor.soulinite": "Soulinite"
 }

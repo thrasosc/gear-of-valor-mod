@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gear-of-valor:block/soulinite_ore"
+  }
+}

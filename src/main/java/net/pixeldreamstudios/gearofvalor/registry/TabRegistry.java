@@ -8,6 +8,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
+import net.pixeldreamstudios.gearofvalor.block.ModBlocks;
+import net.pixeldreamstudios.gearofvalor.item.ModItems;
 
 public class TabRegistry {
     public static final CreativeModeTab CREATIVE_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(GearOfValor.MOD_ID, GearOfValor.MOD_ID), FabricItemGroup.builder().title(Component.translatable("creative_tab." + GearOfValor.MOD_ID)).icon(() -> new ItemStack(ItemRegistry.PALADIN_HELMET)).displayItems((displayContext, entries) -> {
@@ -45,6 +47,19 @@ public class TabRegistry {
         entries.accept(ItemRegistry.NIGHT_RIDER_BOOTS);
 
         entries.accept(ItemRegistry.NIGHT_RIDER_AXE);
+
+        entries.accept(ModItems.FALLEN);
+        entries.accept(ModItems.RAW_FALLEN);
+        entries.accept(ModItems.SOULINITE);
+        entries.accept(ModItems.RAW_SOULINITE);
+        entries.accept(ModBlocks.FALLEN_ORE);
+        entries.accept(ModBlocks.SOULINITE_ORE);
+        entries.accept(ModBlocks.DEEPSLATE_FALLEN_ORE);
+        entries.accept(ModBlocks.NETHER_FALLEN_ORE);
+        entries.accept(ModBlocks.END_STONE_FALLEN_ORE);
+        entries.accept(ModBlocks.DEEPSLATE_SOULINITE_ORE);
+        entries.accept(ModBlocks.NETHER_SOULINITE_ORE);
+        entries.accept(ModBlocks.END_STONE_SOULINITE_ORE);
     }).build());
 
     public static void init() {
