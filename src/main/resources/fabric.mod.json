@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"net.pixeldreamstudios.gearofvalor.GearOfValorClient"
+		],
+		"datagen": [
+			"net.pixeldreamstudios.gearofvalor.GearOfValorDataGenerator"
 		]
 	},
 	"mixins": [

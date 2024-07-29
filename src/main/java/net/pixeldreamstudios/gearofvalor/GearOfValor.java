@@ -7,6 +7,7 @@ import net.pixeldreamstudios.gearofvalor.block.ModBlocks;
 import net.pixeldreamstudios.gearofvalor.item.ModItems;
 import net.pixeldreamstudios.gearofvalor.registry.ItemRegistry;
 import net.pixeldreamstudios.gearofvalor.registry.TabRegistry;
+import net.pixeldreamstudios.gearofvalor.world.OreJsonRegistration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +22,7 @@ public class GearOfValor implements ModInitializer {
 		TabRegistry.init();
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		OreJsonRegistration.registerOreGeneration();
 
 
 	}
