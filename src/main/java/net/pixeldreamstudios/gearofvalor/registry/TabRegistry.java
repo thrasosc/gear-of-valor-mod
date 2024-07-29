@@ -50,16 +50,11 @@ public class TabRegistry {
 
         entries.accept(ModItems.FALLEN);
         entries.accept(ModItems.RAW_FALLEN);
+        entries.accept(ModItems.NOBLE_GEM);
         entries.accept(ModItems.SOULINITE);
         entries.accept(ModItems.RAW_SOULINITE);
         entries.accept(ModBlocks.FALLEN_ORE);
         entries.accept(ModBlocks.SOULINITE_ORE);
-        entries.accept(ModBlocks.DEEPSLATE_FALLEN_ORE);
-        entries.accept(ModBlocks.NETHER_FALLEN_ORE);
-        entries.accept(ModBlocks.END_STONE_FALLEN_ORE);
-        entries.accept(ModBlocks.DEEPSLATE_SOULINITE_ORE);
-        entries.accept(ModBlocks.NETHER_SOULINITE_ORE);
-        entries.accept(ModBlocks.END_STONE_SOULINITE_ORE);
     }).build());
 
     public static void init() {

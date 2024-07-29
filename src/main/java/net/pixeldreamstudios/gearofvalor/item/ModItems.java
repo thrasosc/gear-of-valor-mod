@@ -12,6 +12,7 @@ public class ModItems {
     public static final Item FALLEN = registerItem("fallen", new Item(new FabricItemSettings()));
     public static final Item RAW_SOULINITE = registerItem("raw_soulinite", new Item(new FabricItemSettings()));
     public static final Item SOULINITE = registerItem("soulinite", new Item(new FabricItemSettings()));
+    public static final Item NOBLE_GEM = registerItem("noble_gem", new Item(new FabricItemSettings()));
 
 
     private static Item registerItem(String name, Item item) {
