@@ -49,6 +49,7 @@ public class TabRegistry {
         entries.accept(ItemRegistry.NIGHT_RIDER_AXE);
 
         entries.accept(ModItems.FALLEN);
+        entries.accept(ModItems.FALLEN_CORE);
         entries.accept(ModItems.RAW_FALLEN);
         entries.accept(ModItems.NOBLE_GEM);
         entries.accept(ModItems.SOULINITE);
