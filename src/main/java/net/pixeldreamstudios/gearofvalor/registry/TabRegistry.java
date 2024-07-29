@@ -56,6 +56,7 @@ public class TabRegistry {
         entries.accept(ModItems.RAW_SOULINITE);
         entries.accept(ModBlocks.FALLEN_ORE);
         entries.accept(ModBlocks.SOULINITE_ORE);
+        entries.accept(ModItems.ARISMA_SCALE);
     }).build());
 
     public static void init() {
