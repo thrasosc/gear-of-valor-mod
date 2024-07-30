@@ -47,11 +47,14 @@ public class TabRegistry {
         entries.accept(ItemRegistry.NIGHT_RIDER_BOOTS);
 
         entries.accept(ItemRegistry.NIGHT_RIDER_AXE);
+        entries.accept(ModItems.CROWN);
 
         entries.accept(ModItems.FALLEN);
         entries.accept(ModItems.FALLEN_CORE);
         entries.accept(ModItems.RAW_FALLEN);
         entries.accept(ModItems.NOBLE_GEM);
+        entries.accept(ModItems.TAINTED_IRON);
+        entries.accept(ModItems.UNSEEN_SOUL);
         entries.accept(ModItems.SOULINITE);
         entries.accept(ModItems.RAW_SOULINITE);
         entries.accept(ModBlocks.FALLEN_ORE);

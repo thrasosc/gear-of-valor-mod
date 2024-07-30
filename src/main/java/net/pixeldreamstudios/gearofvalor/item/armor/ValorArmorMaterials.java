@@ -71,6 +71,11 @@ public enum ValorArmorMaterials implements ArmorMaterial {
     }), 10, SoundEvents.ARMOR_EQUIP_IRON, 2.0F, 0.3F, () -> Ingredient.of(Items.IRON_INGOT), Map.of(
             SpellSchools.FIRE.attribute, new AttributeModifier("Fire", 10.0, Operation.ADDITION),
             Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier("Knockback Resistance", 0.05, Operation.MULTIPLY_BASE)
+    )),
+    CROWN("crown", 5, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.HELMET, 2); // Protection for the crown
+    }), 10, SoundEvents.ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.of(Items.GOLD_INGOT), Map.of(
+    Attributes.LUCK, new AttributeModifier("Luck", 1.0, AttributeModifier.Operation.ADDITION)
     ));
 
     private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (p_266653_) -> {

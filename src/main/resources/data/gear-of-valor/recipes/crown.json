@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GBG",
+    "GNG",
+    "IGI"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "N":{
+      "item": "gear-of-valor:noble_gem"
+    },
+    "I":{
+      "item": "minecraft:iron_ingot"
+    },
+    "B":{
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "gear-of-valor:crown",
+    "count": 1
+  }
+}

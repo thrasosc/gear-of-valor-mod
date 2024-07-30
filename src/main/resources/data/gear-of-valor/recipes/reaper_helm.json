@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GAG",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "gear-of-valor:soulinite"
+    },
+    "G": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "result": {
+    "item": "gear-of-valor:reapers_embrace_helmet",
+    "count": 1
+  }
+}

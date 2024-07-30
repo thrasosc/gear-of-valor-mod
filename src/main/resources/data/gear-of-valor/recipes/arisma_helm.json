@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "A A",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "gear-of-valor:arismas_scale"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "gear-of-valor:arismas_awakening_helmet",
+    "count": 1
+  }
+}

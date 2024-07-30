@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "GAG",
+    "AGA"
+  ],
+  "key": {
+    "A": {
+      "item": "gear-of-valor:arismas_scale"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "gear-of-valor:arismas_awakening_chestplate",
+    "count": 1
+  }
+}
