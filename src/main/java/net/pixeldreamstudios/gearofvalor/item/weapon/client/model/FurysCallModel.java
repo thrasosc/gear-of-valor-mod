@@ -11,17 +11,17 @@ public class FurysCallModel extends GeoModel<FurysCallItem> {
     private static final ResourceLocation animation = new ResourceLocation(GearOfValor.MOD_ID, "animations/weapon/furys_call.animation.json");
 
     @Override
-    public ResourceLocation getModelResource(FurysCallItem ancientVanguardSwordItem) {
+    public ResourceLocation getModelResource(FurysCallItem furysCallItem) {
         return model;
     }
 
     @Override
-    public ResourceLocation getTextureResource(FurysCallItem ancientVanguardSwordItem) {
+    public ResourceLocation getTextureResource(FurysCallItem furysCallItem) {
         return texture;
     }
 
     @Override
-    public ResourceLocation getAnimationResource(FurysCallItem ancientVanguardSwordItem) {
+    public ResourceLocation getAnimationResource(FurysCallItem furysCallItem) {
         return animation;
     }
 }
