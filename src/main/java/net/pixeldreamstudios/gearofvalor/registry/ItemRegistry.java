@@ -9,10 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.*;
-import net.pixeldreamstudios.gearofvalor.item.weapon.AncientVanguardShieldItem;
-import net.pixeldreamstudios.gearofvalor.item.weapon.AncientVanguardSwordItem;
-import net.pixeldreamstudios.gearofvalor.item.weapon.FurysCallItem;
-import net.pixeldreamstudios.gearofvalor.item.weapon.NightRiderAxeItem;
+import net.pixeldreamstudios.gearofvalor.item.weapon.*;
 
 public class ItemRegistry {
     // ARMOR SETS
@@ -53,6 +50,8 @@ public class ItemRegistry {
     public static Item NIGHT_RIDER_AXE;
 
     public static Item FURYS_CALL_SWORD;
+
+    public static Item SHADOW_STALKER;
 
     static <T extends Item> T item(String id, T c) {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(GearOfValor.MOD_ID, id), c);
@@ -99,5 +98,6 @@ public class ItemRegistry {
 
         FURYS_CALL_SWORD = item("furys_call", new FurysCallItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
 
+        SHADOW_STALKER = item("shadow_stalker", new ShadowStalkerItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
     }
 }
