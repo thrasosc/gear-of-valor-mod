@@ -45,6 +45,8 @@ public class TabRegistry {
         entries.accept(ItemRegistry.NIGHT_RIDER_BOOTS);
 
         entries.accept(ItemRegistry.NIGHT_RIDER_AXE);
+
+        entries.accept(ItemRegistry.FURYS_CALL_SWORD);
     }).build());
 
     public static void init() {
