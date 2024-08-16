@@ -1,4 +1,4 @@
-package net.pixeldreamstudios.gearofvalor.block;
+package net.pixeldreamstudios.gearofvalor.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
 
-public class ModBlocks {
+public class BlockRegistry {
     public static final Block SOULINITE_ORE = registerBlock("soulinite_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block FALLEN_ORE = registerBlock("fallen_ore",
