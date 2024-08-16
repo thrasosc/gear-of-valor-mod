@@ -6,6 +6,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tiers;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.*;
@@ -51,6 +52,18 @@ public class ItemRegistry {
 
     public static Item NIGHT_RIDER_AXE;
 
+    // NEW ITEMS
+    public static Item RAW_FALLEN;
+    public static Item FALLEN;
+    public static Item RAW_SOULINITE;
+    public static Item SOULINITE;
+    public static Item NOBLE_GEM;
+    public static Item FALLEN_CORE;
+    public static Item ARISMA_SCALE;
+    public static Item UNSEEN_SOUL;
+    public static Item TAINTED_IRON;
+    public static Item CROWN;
+
     static <T extends Item> T item(String id, T c) {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(GearOfValor.MOD_ID, id), c);
         return c;
@@ -93,5 +106,17 @@ public class ItemRegistry {
         NIGHT_RIDER_BOOTS = item("night_rider_boots", new NightRiderArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
         NIGHT_RIDER_AXE = item("night_rider_axe", new NightRiderAxeItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
+
+        // Register new items
+        RAW_FALLEN = item("raw_fallen", new Item(new FabricItemSettings()));
+        FALLEN = item("fallen", new Item(new FabricItemSettings()));
+        RAW_SOULINITE = item("raw_soulinite", new Item(new FabricItemSettings()));
+        SOULINITE = item("soulinite", new Item(new FabricItemSettings()));
+        NOBLE_GEM = item("noble_gem", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+        FALLEN_CORE = item("fallen_core", new Item(new FabricItemSettings().rarity(Rarity.EPIC)));
+        ARISMA_SCALE = item("arisma_scale", new Item(new FabricItemSettings()));
+        UNSEEN_SOUL = item("unseen_soul", new Item(new FabricItemSettings()));
+        TAINTED_IRON = item("tainted_iron", new Item(new FabricItemSettings()));
+        CROWN = item("crown", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
     }
 }

@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "   ",
-    "A A",
-    "G G"
+    "G G",
+    "AAA",
+    "GAG"
   ],
   "key": {
     "A": {
@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "gear-of-valor:reapers_embrace_boots",
+    "item": "gear-of-valor:reapers_embrace_chestplate",
     "count": 1
   }
 }
