@@ -17,7 +17,7 @@ repositories {
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
 	maven { url 'https://jitpack.io' }
-	maven { url 'https://libs.azuredoom.com:4443/mods' }
+	maven {url 'https://libs.azuredoom.com:4443/mods'}
 	// Recommended Dependencies
 	maven { url 'https://maven.isxander.dev/releases' }
 }
@@ -32,6 +32,9 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// Required Dependencies
+	//TODO AAA Particles 1
+//	modImplementation "maven.modrinth:aaa-particles:${project.aaa_particles_version}"
+//	modImplementation "maven.modrinth:architectury-api:${project.architectury_api_version}"
 	modImplementation "mod.azure.azurelib:azurelib-fabric-${project.minecraft_version}:${project.azurelib_version}"
 	modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
 	modImplementation("maven.modrinth:spell-engine:${project.spell_engine_version}")
@@ -77,34 +80,7 @@ jar {
 	}
 }
 
-loom {
-	runs {
-		// This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
-		datagen {
-			inherit server
-			name "Data Generation"
-			vmArg "-Dfabric-api.datagen"
-			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-			vmArg "-Dfabric-api.datagen.modid=mccourse"
-
-			runDir "build/datagen"
-		}
-	}
-}
-
-// Add the generated resources to the main source set
-sourceSets {
-	main {
-		resources {
-			srcDirs += [
-					'src/main/generated'
-			]
-		}
-	}
-}
-
-
-// Configure the maven publication
+// configure the maven publication
 publishing {
 	publications {
 		create("mavenJava", MavenPublication) {
@@ -113,6 +89,7 @@ publishing {
 		}
 	}
 
+	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
 		// Add repositories to publish to here.
 		// Notice: This block does NOT have the same function as the block in the top level.

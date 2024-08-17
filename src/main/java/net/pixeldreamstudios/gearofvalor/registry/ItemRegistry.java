@@ -10,9 +10,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tiers;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
 import net.pixeldreamstudios.gearofvalor.item.armor.sets.*;
-import net.pixeldreamstudios.gearofvalor.item.weapon.AncientVanguardShieldItem;
-import net.pixeldreamstudios.gearofvalor.item.weapon.AncientVanguardSwordItem;
-import net.pixeldreamstudios.gearofvalor.item.weapon.NightRiderAxeItem;
+import net.pixeldreamstudios.gearofvalor.item.weapon.*;
 
 public class ItemRegistry {
     // ARMOR SETS
@@ -49,7 +47,10 @@ public class ItemRegistry {
     // WEAPONS
     public static Item ANCIENT_VANGUARD_SWORD;
     public static Item ANCIENT_VANGUARD_SHIELD;
-
+    public static Item FURYS_CALL_SWORD;
+    public static Item SHADOW_STALKER;
+    public static Item HEAVENS_FALL;
+    public static Item HARBRINGER;
     public static Item NIGHT_RIDER_AXE;
 
     // NEW ITEMS
@@ -106,6 +107,10 @@ public class ItemRegistry {
         NIGHT_RIDER_BOOTS = item("night_rider_boots", new NightRiderArmorItem(ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
         NIGHT_RIDER_AXE = item("night_rider_axe", new NightRiderAxeItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
+        FURYS_CALL_SWORD = item("furys_call", new FurysCallItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
+        HEAVENS_FALL = item("heavens_fall", new HeavensFallItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
+        HARBRINGER = item("harbringer", new HarbringerItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
+        SHADOW_STALKER = item("shadow_stalker", new ShadowStalkerItem(Tiers.IRON, 3, -2.4F, new Item.Properties()));
 
         // Register new items
         RAW_FALLEN = item("raw_fallen", new Item(new FabricItemSettings()));
@@ -117,6 +122,6 @@ public class ItemRegistry {
         ARISMA_SCALE = item("arisma_scale", new Item(new FabricItemSettings()));
         UNSEEN_SOUL = item("unseen_soul", new Item(new FabricItemSettings()));
         TAINTED_IRON = item("tainted_iron", new Item(new FabricItemSettings()));
-        CROWN = item("crown", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+        CROWN = item("crown", new CrownItem(ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.EPIC)));
     }
 }
