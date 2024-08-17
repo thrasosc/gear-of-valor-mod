@@ -8,8 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.pixeldreamstudios.gearofvalor.GearOfValor;
-import net.pixeldreamstudios.gearofvalor.block.ModBlocks;
-import net.pixeldreamstudios.gearofvalor.item.ModItems;
+
 
 public class TabRegistry {
     public static final CreativeModeTab CREATIVE_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(GearOfValor.MOD_ID, GearOfValor.MOD_ID), FabricItemGroup.builder().title(Component.translatable("creative_tab." + GearOfValor.MOD_ID)).icon(() -> new ItemStack(ItemRegistry.PALADIN_HELMET)).displayItems((displayContext, entries) -> {
@@ -47,19 +46,23 @@ public class TabRegistry {
         entries.accept(ItemRegistry.NIGHT_RIDER_BOOTS);
 
         entries.accept(ItemRegistry.NIGHT_RIDER_AXE);
-        entries.accept(ModItems.CROWN);
+        entries.accept(ItemRegistry.CROWN);
+        entries.accept(ItemRegistry.FURYS_CALL_SWORD);
+        entries.accept(ItemRegistry.HEAVENS_FALL);
+        entries.accept(ItemRegistry.HARBRINGER);
+        entries.accept(ItemRegistry.SHADOW_STALKER);
 
-        entries.accept(ModItems.FALLEN);
-        entries.accept(ModItems.FALLEN_CORE);
-        entries.accept(ModItems.RAW_FALLEN);
-        entries.accept(ModItems.NOBLE_GEM);
-        entries.accept(ModItems.TAINTED_IRON);
-        entries.accept(ModItems.UNSEEN_SOUL);
-        entries.accept(ModItems.SOULINITE);
-        entries.accept(ModItems.RAW_SOULINITE);
-        entries.accept(ModBlocks.FALLEN_ORE);
-        entries.accept(ModBlocks.SOULINITE_ORE);
-        entries.accept(ModItems.ARISMA_SCALE);
+        entries.accept(ItemRegistry.FALLEN);
+        entries.accept(ItemRegistry.FALLEN_CORE);
+        entries.accept(ItemRegistry.RAW_FALLEN);
+        entries.accept(ItemRegistry.NOBLE_GEM);
+        entries.accept(ItemRegistry.TAINTED_IRON);
+        entries.accept(ItemRegistry.UNSEEN_SOUL);
+        entries.accept(ItemRegistry.SOULINITE);
+        entries.accept(ItemRegistry.RAW_SOULINITE);
+        entries.accept(BlockRegistry.FALLEN_ORE);
+        entries.accept(BlockRegistry.SOULINITE_ORE);
+        entries.accept(ItemRegistry.ARISMA_SCALE);
     }).build());
 
     public static void init() {

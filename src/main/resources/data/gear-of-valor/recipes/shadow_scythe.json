@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F",
+    "F",
+    "S"
+  ],
+  "key": {
+    "F": {
+      "item": "gear-of-valor:unseen_soul"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "gear-of-valor:shadow_stalker",
+    "count": 1
+  }
+}

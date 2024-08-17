@@ -36,6 +36,12 @@
 
   "creative_tab.gear-of-valor": "Gear of Valor",
 
+  "item.gear-of-valor.furys_call": "Fury's Call",
+  "item.gear-of-valor.heavens_fall": "Heaven's Fall",
+  "item.gear-of-valor.harbringer": "Harbringer",
+
+  "item.gear-of-valor.shadow_stalker": "Shadow Stalker",
+
   "block.gear-of-valor.soulinite_ore": "Soulinite Ore",
   "block.gear-of-valor.deepslate_soulinite_ore": "Deepslate Soulinite Ore",
   "block.gear-of-valor.nether_soulinite_ore": "Nether Soulinite Ore",
@@ -46,6 +52,7 @@
   "block.gear-of-valor.end_stone_fallen_ore": "End Stone Fallen Ore",
   "item.gear-of-valor.raw_fallen": "Raw Fallen",
   "item.gear-of-valor.crown": "King's Crown",
+  "crown.toolip": "Heavy lies the head that wears this crown.",
   "item.gear-of-valor.unseen_soul": "Unseen Soul",
   "item.gear-of-valor.tainted_iron": "Tainted Iron Ingot",
   "item.gear-of-valor.fallen": "Fallen Ingot",
